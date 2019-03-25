@@ -4,8 +4,8 @@ by changing the values of instance variables.
 
 Authors: David Mutchler, Amanda Stouder, Chandan Rupakheti, Katie Dion,
          Claude Anderson, Delvin Defoe, Curt Clifton, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Veronica Gawarecki.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -169,14 +169,16 @@ def RETURN_circle(circle, color):
     where the color is either a string that Rosegraphics understands
     or a rg.Color object.
     """
-    # TODO: 2. First, READ THE ABOVE TEST CODE.
+    # DONE: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
     #
     # HINT: Use the   clone   method to make the copy.
 
-
+    new= circle.clone()
+    new.fill_color=color
+    return new
 def run_test_MUTATE_circle():
     """ Tests the   MUTATE_circle   function. """
     print()
@@ -301,13 +303,14 @@ def MUTATE_circle(circle, color, n):
     Precondition: The first argument is a rg.Circle and the second
                   argument is a color appropriate for Zellegraphics.
     """
-    # TODO: 3. First, READ THE ABOVE TEST CODE.
+    # DONE: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
     # HINT: This function can be implemented with just TWO lines of code.
 
-
+    circle.fill_color=color
+    circle.center.x=circle.center.x+n
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
 # imported by another module), then call the 'main' function.
